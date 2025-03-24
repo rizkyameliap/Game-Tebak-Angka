@@ -7,8 +7,8 @@ player_scores = {}
 
 def guess_number():
     name = input("Masukkan nama Anda: ")
-    target = random.randint(1, 100)  # Angka acak antara 1-100
-    attempts = 5  # Batas percobaan
+    target = random.randint(1, 100)  
+    attempts = 5  
     print(f"Halo {name}, tebak angka antara 1 hingga 100. Anda memiliki {attempts} kesempatan.\n")
 
     for attempt in range(1, attempts + 1):
@@ -22,7 +22,7 @@ def guess_number():
             print(f"Selamat {name}! Anda menebak dengan benar dalam {attempt} percobaan.")
             player_scores[name] = attempt
             break
-        time.sleep(1)  # Jeda agar terlihat lebih natural
+        time.sleep(1)  
 
     else:
         print(f"Maaf {name}, Anda kehabisan kesempatan. Angka yang benar adalah {target}.")
